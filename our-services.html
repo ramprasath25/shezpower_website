@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fav and touch icons -->
+
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title>Shezpower</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- include pace script for automatic web page progress bar  -->
+
+
+    <script>
+        paceOptions = {
+            elements: true
+        };
+    </script>
+
+    <script src="assets/js/pace.min.js"></script>
+</head>
+
+<body>
+
+
+  <!-- Modal Login start -->
+  <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog">
+      <form method="post" action=""><div class="modal-dialog ">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                  <h3 class="modal-title-site text-center"> Login </h3>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group login-username">
+                      <div>
+                          <input name="log" id="login-user" class="form-control input" size="20"
+                                 placeholder="Enter Username" type="text">
+                      </div>
+                  </div>
+                  <div class="form-group login-password">
+                      <div>
+                          <input name="Password" id="login-password" class="form-control input" size="20"
+                                 placeholder="Password" type="password">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div>
+                          <div class="checkbox login-remember">
+                              <label>
+                                  <input name="rememberme" value="forever" checked="checked" type="checkbox">
+                                  Remember Me </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <div>
+                          <input name="submit" class="btn  btn-block btn-lg btn-primary" value="LOGIN" type="submit">
+                      </div>
+                  </div>
+                  <!--userForm-->
+                </form>
+              </div>
+              <div class="modal-footer">
+                  <p class="text-center"> Not here before? <a data-toggle="modal" data-dismiss="modal"
+                                                              href="#ModalSignup"> Sign Up. </a> <br>
+                      <a href="#ModalForgot" data-toggle="modal" data-dismiss="modal"> Lost your password? </a></p>
+              </div>
+          </div>
+          <!-- /.modal-content -->
+
+      </div>
+      <!-- /.modal-dialog -->
+
+  </div>
+  <!-- /.Modal Login -->
+  <!-- Modal ForgotPassword start -->
+  <div class="modal signUpContent fade" id="ModalForgot" tabindex="-1" role="dialog">
+      <form method="post" action=""><div class="modal-dialog ">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                  <h3 class="modal-title-site text-center"> Forgot Password </h3>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group login-username">
+                      <div>
+                          <input name="log" id="login-user" class="form-control input" size="20"
+                                 placeholder="Enter Email id registered" type="text">
+                      </div>
+                  </div>
+
+                  <div>
+                      <div>
+                          <input name="submit" class="btn  btn-block btn-lg btn-primary" value="SUBMIT" type="submit">
+                      </div>
+                  </div>
+                  <!--userForm-->
+                </form>
+              </div>
+          </div>
+          <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+
+  </div>
+  <!-- Modal Signup start -->
+  <div class="modal signUpContent fade" id="ModalSignup" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                  <h3 class="modal-title-site text-center"> SIGNUP </h3>
+              </div>
+              <div class="modal-body">
+                  <div class="control-group"><a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP WITH
+                      FACEBOOK </a></div>
+                  <h5 style="padding:10px 0 10px 0;" class="text-center"> OR </h5>
+
+                  <div class="form-group reg-username">
+                      <div>
+                          <input name="login" class="form-control input" size="20" placeholder="Enter Username"
+                                 type="text">
+                      </div>
+                  </div>
+                  <div class="form-group reg-email">
+                      <div>
+                          <input name="reg" class="form-control input" size="20" placeholder="Enter Email" type="text">
+                      </div>
+                  </div>
+                  <div class="form-group reg-password">
+                      <div>
+                          <input name="password" class="form-control input" size="20" placeholder="Password"
+                                 type="password">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div>
+                          <div class="checkbox login-remember">
+                              <label>
+                                  <input name="rememberme" id="rememberme" value="forever" checked="checked"
+                                         type="checkbox">
+                                  Remember Me </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <div>
+                          <input name="submit" class="btn  btn-block btn-lg btn-primary" value="REGISTER" type="submit">
+                      </div>
+                  </div>
+                  <!--userForm-->
+
+              </div>
+              <div class="modal-footer">
+                  <p class="text-center"> Already member? <a data-toggle="modal" data-dismiss="modal" href="#ModalLogin">
+                      Sign in </a></p>
+              </div>
+          </div>
+          <!-- /.modal-content -->
+
+      </div>
+      <!-- /.modal-dialog -->
+
+  </div>
+  <!-- /.ModalSignup End -->
+
+  <!-- Fixed navbar start -->
+  <div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
+      <div class="navbar-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+                      <div class="pull-left ">
+                          <ul class="userMenu ">
+
+                              <li class="phone-number"><a href="callto:+919886121604"> <span> <i
+                                      class="glyphicon glyphicon-phone-alt "></i></span> <span class="hidden-xs"
+                                                                                               style="margin-left:5px">+91 9886 121 604 </span>
+                              </a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
+                      <div class="pull-right">
+                          <ul class="userMenu">
+
+                              <li><a href="#" data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span>
+                                  <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a></li>
+                              <li class="hidden-xs"><a href="#" data-toggle="modal" data-target="#ModalSignup"> Sign Up </a></li>
+                              <li class="hidden-xs"><a href="register.html"> Store </a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--/.navbar-top-->
+
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
+                      class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span
+                      class="icon-bar"> </span> <span class="icon-bar"> </span></button>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"><i
+                      class="fa fa-shopping-cart colorWhite"> </i> <span
+                      class="cartRespons colorWhite"> Cart</span></button>
+              <a class="navbar-brand " href="index.html"> <img src="images/logo.png" alt="TSHOP"> </a>
+
+              <!-- this part for mobile -->
+              <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
+                  <div class="input-group">
+                      <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
+                  </div>
+                  <!-- /input-group -->
+
+              </div>
+          </div>
+
+                  <!--/.navbar-cart-->
+                          <div class="navbar-collapse collapse">
+                              <ul class="nav navbar-nav">
+                                  <li class=""><a href="index.html"> Home </a></li>
+                                  <li class="dropdown megamenu-fullwidth"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                      Products <b class="caret"> </b> </a>
+
+                                      <ul class="dropdown-menu">
+                                          <li class="megamenu-content">
+                                              <!-- megamenu-content -->
+                                              <!-- <h3 class="promo-1 no-margin hidden-xs">Products</h3> -->
+                                              <h3 class="promo-1sub hidden-xs">Products</h3>
+                                              <ul class="col-lg-3  col-sm-3 col-md-3 unstyled">
+                                                  <li class="no-border">
+                                                      <p><strong>  Clothing & Accessories</strong></p>
+                                                  </li>
+                                                  <li><a href="products.html?cat=pr_01"> Various designer suit</a></li>
+                                                  <li><a href="products.html?cat=pr_02"> Designer Saree </a></li>
+                                                  <li><a href="products.html?cat=pr_03"> Designer Dress Material </a></li>
+                                                  <li><a href="products.html?cat=pr_04"> Designer Baby clothes</a></li>
+                                                  <li><a href="products.html?cat=pr_05"> Handmade Jewelry</a></li>
+                                              </ul>
+
+                                              <ul class="col-lg-3  col-sm-3 col-md-3 unstyled">
+                                                  <li class="no-border">
+                                                      <p><strong>Home-made Delicacies</strong></p>
+                                                  </li>
+                                                  <li><a href="products.html?cat=pr_06"> Cakes / Pastries </a></li>
+                                                  <li><a href="products.html?cat=pr_07"> Papad / Sweet / Pickle </a></li>
+                                              </ul>
+
+                                              <ul class="col-lg-3  col-sm-3 col-md-3 unstyled ">
+                                                  <li class="no-border">
+                                                      <p><strong>  Home Furnishing </strong></p>
+                                                  </li>
+                                                  <li><a href="products.html?cat=pr_08">Glass designing</a></li>
+                                                  <li><a href="products.html?cat=pr_09">Curtain</a></li>
+                                                  <li><a href="products.html?cat=pr_10">Cushion / Pillow cover / Bed Spread</a></li>
+                                                  <li><a href="products.html?cat=pr_11"> Tablecloths</a></li>
+                                                  <li><a href="products.html?cat=pr_12"> Designer light shades
+                                                     <!-- <span  class="label label-success">NEW</span>  -->
+                                                   </a></li>
+                                              </ul>
+
+                                              <ul class="col-lg-3  col-sm-3 col-md-3 unstyled">
+                                                  <li class="no-border">
+                                                      <p><strong> Art & Craft </strong></p>
+                                                  </li>
+                                                  <li><a href="products.html?cat=pr_13">Glass Painting</a></li>
+                                                  <li><a href="products.html?cat=pr_14"> Jute Products </a></li>
+                                                  <li><a href="products.html?cat=pr_15"> Painting </a></li>
+                                              </ul>
+                                          </li>
+                                      </ul>
+                                  </li>
+                              </li>
+
+                                  <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
+                                  <li class="dropdown megamenu-80width "><a data-toggle="dropdown" class="dropdown-toggle" href="#"> SERVICES
+                                      <b class="caret"> </b> </a>
+                                      <ul class="dropdown-menu">
+                                          <li class="megamenu-content">
+                                              <h3 class="promo-1sub hidden-xs">SERVICES</h3>
+                                              <!-- megamenu-content -->
+
+                                              <ul class="col-lg-3  col-sm-3 col-md-3  unstyled noMarginLeft">
+                                                  <li>
+                                                      <p><strong>  Events Organizer </strong></p>
+                                                  </li>
+                                                  <li><a href="services.html?cat=se_01"> Birthday Party organizer </a></li>
+                                                  <li><a href="services.html?cat=se_02"> Wedding planner </a></li>
+                                                  <li><a href="services.html?cat=se_03"> Catering Services </a></li>
+                                              </ul>
+                                              <ul class="col-lg-3  col-sm-3 col-md-3  unstyled">
+                                                  <li>
+                                                      <p><strong>Skilled professional services </strong></p>
+                                                  </li>
+                                                  <li><a href="services.html?cat=se_04"> Content Write / Blog Writer </a></li>
+                                                  <li><a href="services.html?cat=se_05"> Web designer</a></li>
+                                              </ul>
+                                              <ul class="col-lg-3  col-sm-3 col-md-3  unstyled">
+                                                  <li>
+                                                      <p><strong> Child-care Training & other services</strong></p>
+                                                  </li>
+                                                  <li><a href="services.html?cat=se_06"> Material based learning </a></li>
+                                                  <li><a href="services.html?cat=se_07"> Theme based learning session </a></li>
+                                                  <li><a href="services.html?cat=se_08"> Science based coaching</a></li>
+<li><a href="services.html?cat=se_09">Yoga training </a></li>
+                                              </ul>
+                                              <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-6">
+                                                  <li class="no-margin productPopItem "><a href="product-details.html"> <img
+                                                          class="img-responsive" src="images/site/g4.jpg" alt="img"> </a> <a
+                                                          class="text-center productInfo alpha90" href="services.html?cat=se_04">  Content Write / Blog Writer<br>
+                                                     </a></li>
+                                              </ul>
+                                          </li>
+                                      </ul>
+                                  </li>
+                                  <li class="dropdown megamenu-80width"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                      SKILL DEVELOPMENT <b class="caret"> </b> </a>
+                                      <ul class="dropdown-menu">
+                                          <li class="megamenu-content ">
+                                              <h3 class="promo-1sub hidden-xs">Training</h3>
+                                              <ul class="col-lg-4  col-sm-4 col-md-4 unstyled noMarginLeft">
+                                                  <li class="no-border">
+                                                      <p><strong> Long Term course: Upto1 year</strong></p>
+                                                  </li>
+                                                  <li><a href="skill.html?cat=sk_01"> Women Entrepreneurship Development Program</a></li>
+                                              </ul>
+                                              <ul class="col-lg-4 col-sm-4 col-md-4 unstyled noMarginLeft">
+                                                  <li class="no-border">
+                                                      <p><strong> Mid Term course: 3-6 months course</strong></p>
+                                                  </li>
+                                                  <li><a href="skill.html?cat=sk_02"> Image consulting</a></li>
+                                                  <li><a href="skill.html?cat=sk_03"> Digital marketing</a></li>
+                                              </ul>
+                                              <ul class="col-lg-4 col-sm-4 col-md-4 unstyled noMarginLeft">
+                                                  <li class="no-border">
+                                                      <p><strong> Short Term course : upto 30 days</strong></p>
+                                                  </li>
+                                                  <li><a href="skill.html?cat=sk_05"> Cooking & Baking class</a></li>
+                                                  <li><a href="skill.html?cat=sk_06"> Jewellery Making class</a></li>
+                                                  <li><a href="skill.html?cat=sk_07"> Design/Decoration class</a></li>
+                                              </ul>
+                                          </li>
+                                      </ul>
+                              </ul>
+
+                              <!--- this part will be hidden for mobile version -->
+                              <div class="nav navbar-nav navbar-right hidden-xs">
+                                  <div class="dropdown  cartMenu "><a href="cart.html" class="dropdown-toggle"> <i
+                                          class="fa fa-shopping-cart"> </i> <span class="cartRespons"> Cart </span> </a>
+                                      <!--/.dropdown-menu-->
+                                  </div>
+                                  <!--/.cartMenu-->
+
+                                  <div class="search-box">
+                                      <div class="input-group">
+                                          <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
+                                      </div>
+                                      <!-- /input-group -->
+
+                                  </div>
+                                  <!--/.search-box -->
+                              </div>
+                              <!--/.navbar-nav hidden-xs-->
+                          </div>
+          <!--/.nav-collapse -->
+
+      </div>
+      <!--/.container -->
+
+      <div class="search-full text-right"><a class="pull-right search-close"> <i class=" fa fa-times-circle"> </i> </a>
+
+          <div class="searchInputBox pull-right">
+              <input type="search" data-searchurl="search?=" name="q" placeholder="start typing and hit enter to search"
+                     class="search-input">
+              <button class="btn-nobg search-btn" type="submit"><i class="fa fa-search"> </i></button>
+          </div>
+      </div>
+      <!--/.search-full-->
+
+  </div>
+  <!-- /.Fixed navbar  -->
+
+<div class="container main-container headerOffset">
+
+    <div class="row innerPage">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row userInfo">
+                <div class="col-lg-1 col-md-1 col-sm-12 serviceIcons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 ">
+                  <h2>Online Selling Platform</h2>
+                  <p class="text-justify">This is the first online site in India where the products or services owned and operated by women entrepreneurs can be listed. Anyone can buy from our site, but sellers are women only!</p>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-12 serviceIcons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                  <h2>Incubation Center</h2>
+                  <p class="text-justify">Not only that we can help them to incubate their business idea and connect them with various kind of support they need from inception till fund raising.</p>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-12 serviceIcons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                  <h2>Skill Development</h2>
+                  <p class="text-justify">If women are still forming or creating their product and/or service ideas, we will offer various skills development activities to help them to achieve their dreams. Our team of experts is ready to guide them in various range of ways</p>
+                </div>
+            </div>
+            <!--/row end-->
+        </div>
+    </div>
+    <!--/.innerPage-->
+    <div style="clear:both"></div>
+</div>
+<!-- /.main-container -->
+
+
+<div class="gap"></div>
+
+
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3  col-md-3 col-sm-4 col-xs-6">
+                    <h3> Support </h3>
+                    <ul>
+                        <li class="supportLi">
+                            <p> Get in touch with us </p>
+                            <h4><a class="inline" href="callto:+12025550151"> <strong> <i class="fa fa-phone"> </i> +91 9886 121 604 </strong> </a></h4>
+                            <h4><a class="inline" href="mailto:support@shezpower.com"> <i class="fa fa-envelope-o"> </i>
+                                support@shezpower.com </a></h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-3 col-xs-6">
+                    <h3> shezpower </h3>
+                    <ul>
+                        <li><a href="about-us.html">
+                            About us
+                        </a></li>
+                        <li><a href="our-services.html">
+                            Services</a></li>
+                        <li><a href="contact-us.html">
+                            Contact Us
+                        </a></li>
+                    </ul>
+                </div>
+                <div style="clear:both" class="hide visible-xs"></div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Information </h3>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="faq.html">FAQ
+                        </a></li>
+                        <li><a href="#"> Privacy notice
+                        </a></li>
+                        <li><a href="terms-conditions.html"> Terms & conditions
+                        </a></li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> My Account </h3>
+                    <ul>
+                        <li><a href="account.html"> My Account </a></li>
+                        <li><a href="my-address.html"> My Address </a></li>
+                        <li><a href="order-list.html"> Order list </a></li>
+                        <li><a href="order-status.html"> Order Status </a></li>
+                    </ul>
+                </div>
+                <div style="clear:both" class="hide visible-xs"></div>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3> Stay in touch </h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsLatterBox text-center">
+                                <input type="text" class="full text-center" placeholder="Email ">
+                                <button class="btn  bg-gray" type="button"> Subscribe <i
+                                        class="fa fa-long-arrow-right"> </i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li><a href="http://facebook.com"> <i class=" fa fa-facebook"> &nbsp; </i> </a></li>
+                        <li><a href="http://twitter.com"> <i class="fa fa-twitter"> &nbsp; </i> </a></li>
+                        <li><a href="https://plus.google.com"> <i class="fa fa-google-plus"> &nbsp; </i> </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> &copy; 2015, Shezpower.com, All rights reserved </p>
+            <div class="pull-right paymentMethodImg">
+                <img height="30" class="pull-right" src="images/site/payment/master_card.png" alt="img">
+                <img height="30" class="pull-right" src="images/site/payment/visa_card.png" alt="img">
+                <img height="30" class="pull-right" src="images/site/payment/paypal.png" alt="img">
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom-->
+</footer>
+
+
+<!-- Le javascript
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- include  parallax plugin -->
+<script type="text/javascript" src="assets/js/jquery.parallax-1.1.js"></script>
+
+<!-- optionally include helper plugins -->
+<script type="text/javascript" src="assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+
+<!-- include mCustomScrollbar plugin //Custom Scrollbar  -->
+
+<script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.js"></script>
+
+<!-- include icheck plugin // customized checkboxes and radio buttons   -->
+<script type="text/javascript" src="assets/plugins/icheck-1.x/icheck.min.js"></script>
+
+<!-- include grid.js // for equal Div height  -->
+<script src="assets/js/grids.js"></script>
+
+<!-- include carousel slider plugin  -->
+<script src="assets/js/owl.carousel.min.js"></script>
+
+<!-- jQuery select2 // custom select   -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+<!-- include touchspin.js // touch friendly input spinner component   -->
+<script src="assets/js/bootstrap.touchspin.js"></script>
+
+<!-- include custom script for site  -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>
