@@ -107,67 +107,55 @@
 
   </div>
   <!-- /.Fixed navbar  -->
-<div class="container main-container headerOffset">
-    <!-- <div class="row">
-        <div class="breadcrumbDiv col-lg-12">
-            <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="account.html">Products</a></li>
-                <li class="active"> My information</li>
-            </ul>
-        </div>
-    </div> -->
+<div class="container main-container headerOffset">    
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-7">
             <h1 class="section-title-inner"><span><i
                     class="glyphicon glyphicon-credit-card"></i> Upload Products </span></h1>
-
             <div class="row userInfo">
                 <div class="col-lg-12">
                     <h2 class="block-title-2"> Please be sure to update your product information if it has
                         changed. </h2>
-
                     <p class="required"><sup>*</sup> Required field</p>
                 </div>
                 <form method="post" id="addProductsForm" enctype="multipart/form-data">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group required">
-                            <label for="InputTitle">Title <sup>*</sup> </label>
-                            <input type="text" class="form-control" id="InputName" placeholder="Title" name="title">
+                            <label>Title <sup>*</sup> </label>
+                            <input type="text" class="form-control" placeholder="Title" name="title">
                         </div>
                         <div class="form-group required">
-                            <label for="InputLastName">Short description <sup>*</sup> </label>
-                            <input type="text" class="form-control" id="InputShortDescription" placeholder="Short Description" name="short_description">
+                            <label>Short description <sup>*</sup> </label>
+                            <input type="text" class="form-control" placeholder="Short Description" name="short_description">
                         </div>                        
                     </div>
                     <div class="col-xs-12 col-sm-6">                        
                         <div class="form-group required">
-                            <label for="InputPasswordnew"> Category </label>
+                            <label> Category </label>
                             <select name="cat_id">
                               <option>Product</option>
                               <option>Service</option>
                             </select>
                         </div>
                         <div class="form-group required">
-                            <label for="description"> Description <sup> * </sup> </label>
-                            <textarea name="description" class="form-control"
-                                   id="description" name="description"></textarea>
+                            <label> Description <sup> * </sup> </label>
+                            <textarea name="description" class="form-control" name="description"></textarea>
                         </div>
                         
                     </div> 
                     <div class="col-lg-12"><hr/><h3>Price</h3></div>   
                       <div class="col-xs-12 col-sm-6">
                         <div class="form-group required">
-                            <label for="marketPrice">Market Price <sup>*</sup> </label>
-                            <input type="text" class="form-control" id="marketPrice" placeholder="Market Price">
+                            <label>Market Price <sup>*</sup> </label>
+                            <input type="text" class="form-control" name="marketPrice" placeholder="Market Price">
                         </div>
                         <div class="form-group">
-                            <label for="discount">Discount %</label>
-                            <input  type="text" class="form-control" id="discount" placeholder="Discount">
+                            <label>Discount %</label>
+                            <input  type="text" class="form-control" name="discount" placeholder="Discount">
                         </div>
                         <div class="form-group required">
-                            <label for="currency">Currency <sup>*</sup></label>
-                            <select>
+                            <label>Currency <sup>*</sup></label>
+                            <select name="currency">
                               <option>INR</option>
                               <option>USD</option>
                             </select>
@@ -175,30 +163,36 @@
                       </div>
                       <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="salePrice">Sale Price</label>
-                            <input  type="text" class="form-control" id="salePrice" placeholder="Sale Price">
+                            <label>Discount Price</label>
+                            <input  type="text" class="form-control" name="discountPrice" placeholder="Discount Price">
                         </div>
                         <div class="form-group">
-                            <label for="discountEndDate">Discount End Date</label>
-                            <input  type="text" class="form-control" id="discountEndDate" placeholder="DD/MM/YYYY">
+                            <label>Discount End Date</label>
+                            <input type="text" class="form-control" name="discountEndDate" placeholder="DD/MM/YYYY">
                         </div>
                       </div> 
-                      <div class="col-lg-12"><hr/><h3>Specification</h3></div> 
+                      <div class="col-lg-12"><hr/><h3>Specification</h3></div>
+                        <div class="col-xs-12 col-sm-12">
+                          <div class="form-group">
+                            <label>Unit of Measurement</label>
+                            <input  type="text" class="form-control" name="unitOfMeasurement" placeholder="eg : piece, size..">
+                          </div>
+                        </div>
                         <div class="col-xs-12 col-sm-6">
-                          <input  type="text" class="form-control" id="specsTitle" placeholder="Specification Title">
+                          <input  type="text" class="form-control" name="specsTitle" placeholder="Specification Title">
                         </div>
                         <div class="col-xs-12 col-sm-6" style="border-left: 1px dotted #666">
-                          <input  type="text" class="form-control" id="specs" placeholder="Specification">
+                          <input  type="text" class="form-control" name="specs" placeholder="Specification">
                         </div>
                       <div class="col-lg-12"><hr/><h3>Images</h3></div> 
                         <div class="col-xs-12 col-sm-6">
                           <label for="thumbnail">Thumbnail Image (285px X 380px)</label>
-                          <input id="thumbImgBtn" name="thumbnail" class="input-file" type="file" style="margin: 10px"> 
+                          <input id="thumbImgBtn" name="thumbnail_img" class="input-file" type="file" style="margin: 10px"> 
                           <img id="thumbnail" src="images/noimage.jpg" class="img-thumbnail" alt="your image" style="width:275px; height:275px" />
                         </div>
                         <div class="col-xs-12 col-sm-6">
                           <label for="mainImage">Main Image (600px X 600px)</label>
-                          <input id="mainImgBtn" class="input-file" name="product_img" type="file" style="margin: 10px"> 
+                          <input id="mainImgBtn" class="input-file" name="detail_img" type="file" style="margin: 10px"> 
                           <img id="mainImage" src="images/noimage.jpg" class="img-thumbnail" alt="your image" style="width:275px; height:275px"/>
                         </div>
                        <div class="col-lg-12"><hr/><h3></div> 
@@ -317,7 +311,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 </script>
-<script src="ajax/vendor.js"></script>
+<script src="ajax/store.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- include  parallax plugin -->
 <script type="text/javascript" src="assets/js/jquery.parallax-1.1.js"></script>
