@@ -1,12 +1,12 @@
 $(function(){
 	//Getting Local storage
 	var userDetails = JSON.parse(localStorage.getItem('userDetails'));
-	if(userDetails !== null && userDetails !== ''){
-		$('#userName').text("Hi "+userDetails.email);
-	}
-	else{
-		window.location.href = 'index.html';
-	}
+//	if(userDetails !== null && userDetails !== ''){
+//		$('#userName').text("Hi "+userDetails.email);
+//	}
+//	else{
+//		window.location.href = 'index.html';
+//	}
 });
 
 function logoutVendor(){
