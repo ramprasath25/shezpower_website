@@ -6,32 +6,23 @@
       <!-- Fav and touch icons -->
 
       <link rel="shortcut icon" href="assets/ico/favicon.png">
-      <title>Shezpower</title>
-
+      <title>Shezpower | Login</title>
       <!-- Bootstrap core CSS -->
       <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-
       <!-- Custom styles for this template -->
       <link href="assets/css/style.css" rel="stylesheet">
-
-
       <!-- Just for debugging purposes. -->
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
       <![endif]-->
-
       <!-- include pace script for automatic web page progress bar  -->
-
-
       <script>
           paceOptions = {
               elements: true
           };
       </script>
-
       <script src="assets/js/pace.min.js"></script>
   </head>
   <style>
@@ -43,216 +34,64 @@
   }
   </style>
   <body>
-
-
-    <!-- Modal Login start -->
-    <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog">
-        <div class="modal-dialog ">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-                    <h3 class="modal-title-site text-center"> Login to SHEZPOWER </h3>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group login-username">
-                        <div>
-                            <input name="log" id="login-user" class="form-control input" size="20"
-                                   placeholder="Enter Username" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group login-password">
-                        <div>
-                            <input name="Password" id="login-password" class="form-control input" size="20"
-                                   placeholder="Password" type="password">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <div class="checkbox login-remember">
-                                <label>
-                                    <input name="rememberme" value="forever" checked="checked" type="checkbox">
-                                    Remember Me </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <input name="submit" class="btn  btn-block btn-lg btn-primary" value="LOGIN" type="submit">
-                        </div>
-                    </div>
-                    <!--userForm-->
-
-                </div>
-                <div class="modal-footer">
-                    <p class="text-center"> Not here before? <a data-toggle="modal" data-dismiss="modal"
-                                                                href="#ModalSignup"> Sign Up. </a> <br>
-                        <a href="#ModalForgot" data-toggle="modal" data-dismiss="modal"> Lost your password? </a></p>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-
-        </div>
-        <!-- /.modal-dialog -->
-
-    </div>
-    <!-- /.Modal Login -->
-    <!-- Modal ForgotPassword start -->
-    <div class="modal signUpContent fade" id="ModalForgot" tabindex="-1" role="dialog">
-        <form method="post" action=""><div class="modal-dialog ">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-                    <h3 class="modal-title-site text-center"> Forgot Password </h3>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group login-username">
-                        <div>
-                            <input name="log" id="login-user" class="form-control input" size="20"
-                                   placeholder="Enter Email id registered" type="text">
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <input name="submit" class="btn  btn-block btn-lg btn-primary" value="SUBMIT" type="submit">
-                        </div>
-                    </div>
-                    <!--userForm-->
-                  </form>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-
-    </div>
-      <!-- Modal Signup start -->
-    <div class="modal signUpContent fade" id="ModalSignup" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-                    <h3 class="modal-title-site text-center"> SIGNUP </h3>
-                </div>
-                <div class="modal-body">
-                    <div class="control-group"><a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP WITH
-                        FACEBOOK </a></div>
-                    <h5 style="padding:10px 0 10px 0;" class="text-center"> OR </h5>
-
-                    <div class="form-group reg-username">
-                        <div>
-                            <input name="login" class="form-control input" size="20" placeholder="Enter Username"
-                                   type="text">
-                        </div>
-                    </div>
-                    <div class="form-group reg-email">
-                        <div>
-                            <input name="reg" class="form-control input" size="20" placeholder="Enter Email" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group reg-password">
-                        <div>
-                            <input name="password" class="form-control input" size="20" placeholder="Password"
-                                   type="password">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <div class="checkbox login-remember">
-                                <label>
-                                    <input name="rememberme" id="rememberme" value="forever" checked="checked"
-                                           type="checkbox">
-                                    Remember Me </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <input name="submit" class="btn  btn-block btn-lg btn-primary" value="REGISTER" type="submit">
-                        </div>
-                    </div>
-                    <!--userForm-->
-
-                </div>
-                <div class="modal-footer">
-                    <p class="text-center"> Already member? <a data-toggle="modal" data-dismiss="modal" href="#ModalLogin">
-                        Sign in </a></p>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-
-        </div>
-        <!-- /.modal-dialog -->
-
-    </div>
-    <!-- /.ModalSignup End -->
-
     <!-- Fixed navbar start -->
-    <div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
-        <div class="navbar-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
-                        <div class="pull-left ">
-                            <ul class="userMenu ">
-
-                                <li class="phone-number"><a href="callto:+919886121604"> <span> <i
-                                        class="glyphicon glyphicon-phone-alt "></i></span> <span class="hidden-xs"
-                                                                                                 style="margin-left:5px">+91 9886 121 604 </span>
-                                </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
-                        <div class="pull-right">
-                            <ul class="userMenu">
-
-                                <li><a href="#" data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span>
-                                    <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a></li>
-                                <li class="hidden-xs"><a href="#" data-toggle="modal" data-target="#ModalSignup"> Sign Up </a></li>
-                                <li class="hidden-xs"><a href="register.html"> Store </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.navbar-top-->
-
+<div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
+    <div class="navbar-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
-                        class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span
-                        class="icon-bar"> </span> <span class="icon-bar"> </span></button>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"><i
-                        class="fa fa-shopping-cart colorWhite"> </i> <span
-                        class="cartRespons colorWhite"> Cart</span></button>
-                <a class="navbar-brand " href="index.html"> <img src="images/logo.png" alt="TSHOP"> </a>
-
-                <!-- this part for mobile -->
-                <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
-                    <div class="input-group">
-                        <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+                    <div class="pull-left ">
+                        <ul class="userMenu ">
+                            <li class="phone-number"><a href="callto:+919886121604"> <span> <i
+                                    class="glyphicon glyphicon-phone-alt "></i></span> <span class="hidden-xs"
+                                                                                             style="margin-left:5px">+91 9886 121 604 </span>
+                            </a></li>
+                        </ul>
                     </div>
-                    <!-- /input-group -->
+                </div>
+                <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
+                    <div class="pull-right">
+                        <ul class="userMenu">
 
+                            <li><a href="login.html"> <span class="hidden-xs">Sign In</span>
+                                <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a></li>
+                            <li class="hidden-xs"><a href="register.html"> Sign Up </a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-                    <!--/.navbar-cart-->
-
-                            <div class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav">
-                                    <li class=""><a href="index.html"> Home </a></li>
-                                    <li class=""><a href="register.html"> Register store </a></li>
-                                </ul>
-                                
-                            </div>
-            <!--/.nav-collapse -->
         </div>
-        <!--/.container -->
     </div>
-    <!-- /.Fixed navbar  -->
+    <!--/.navbar-top-->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
+                    class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span
+                    class="icon-bar"> </span> <span class="icon-bar"> </span></button>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"><i
+                    class="fa fa-shopping-cart colorWhite"> </i> <span
+                    class="cartRespons colorWhite"> Cart</span></button>
+            <a class="navbar-brand " href="index.html"> <img src="images/logo.png" alt="shezpower"> </a>
+            <!-- this part for mobile -->
+            <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
+                <div class="input-group">
+                    <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
+                </div>
+                <!-- /input-group -->
+            </div>
+        </div>
+        <!--/.navbar-cart-->
+        <div class="navbar-collapse collapse">
+                              <ul class="nav navbar-nav">
+                                  <li class=""><a href="index.html"> Home </a></li> 
+                                  <li class=""><a href="register.html"> Register </a></li>                                
+                              </ul>                             
+                          </div>
+        <!--/.nav-collapse -->
+    </div>
+    <!--/.container -->   
+</div>
+<!-- /.Fixed navbar  -->
     <!-- Main-container-->
     <div class="container main-container headerOffset">
 
@@ -341,13 +180,13 @@
                       </ul>
                   </div>
                   <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                      <h3> My Account </h3>
+                      <!-- <h3> My Account </h3>
                       <ul>
                           <li><a href="account.html"> My Account </a></li>
                           <li><a href="my-address.html"> My Address </a></li>
                           <li><a href="order-list.html"> Order list </a></li>
                           <li><a href="order-status.html"> Order Status </a></li>
-                      </ul>
+                      </ul> -->
                   </div>
                   <div style="clear:both" class="hide visible-xs"></div>
                   <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">

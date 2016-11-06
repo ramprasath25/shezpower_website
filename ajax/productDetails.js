@@ -2,20 +2,19 @@ $(document).ready(function () {
   function getQueryStringValue (key) {
     return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
   }
-  // Would write the value of the QueryString-variable called name to the console
-  $.post('http://localhost:8080/user/productDetails',{"p_id":getQueryStringValue("p_id")},function(res){
-
+ 
+  $.post('http://127.0.0.1:8080/user/productDetails',{"p_id":getQueryStringValue("p_id")},function(res){
+    console.log(res);
     if(res.http_code == 200){
-      if( res.Details.length > 0){
         //BreadCrumb
-        var params = res.Details[0];
+        var params = res.Details;
         $('.breadcrumbDiv').html('<ul class="breadcrumb">'+
                                   '<li><a href="index.html">Home</a></li>'+
-                                  '<li><a href="'+params.category+'.html">'+params.category+'</a></li>'+
-                                  '<li><a href="">'+params.sub_category+'</a></li>'+
+                                  '<li><a href="">'+params.category+'</a></li>'+
+                                  '<li><a href="products.html?cat='+params.sub_category+'">'+params.sub_category+'</a></li>'+
                                   '</ul>');
 
-        $('.product-img').html('<img src='+params.img.product_img+' class="img-responsive" id ="img-details" alt="img">');
+        $('.product-img').html('<img src="http://127.0.0.1:8080/'+params.images.detail_img+'" class="img-responsive" id ="img-details" alt="img">');
         var specs = '';
         if(params.specs){
           specs += '<ul>';
@@ -27,6 +26,16 @@ $(document).ready(function () {
         else{
           specs += 'No Specification available';
         }
+        /*** Price ***/
+        var priceTag = '';
+        if(params.priceDetails.discountPrice === '' || params.priceDetails.discountPrice === null) {
+          priceTag = '<span class="price-sales"><i class="fa fa-inr"></i> '+ params.priceDetails.marketPrice +'</span>'
+        }
+        else{
+          priceTag = '<span class="price-sales"><i class="fa fa-inr"></i>'+ params.priceDetails.discountPrice +'</span> '+
+                        '<span class="price-standard"><i class="fa fa-inr"></i> '+ params.priceDetails.marketPrice +'</span>';
+        }
+
         var details = '<h1 class="product-title"> '+params.title +'</h2>'+
                         '<div class="rating">'+
                             '<p><span><i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i></span> <span><i'+
@@ -34,10 +43,7 @@ $(document).ready(function () {
                                     'class="fa fa-star-o "></i></span> <span class="ratingInfo"> <span> / </span> <a'+
                                     'data-toggle="modal" data-target="#modal-review"> Write a review</a> </span></p>'+
                         '</div>'+
-                        '<div class="product-price">'+
-                            '<span class="price-sales"> <i class="fa fa-inr"></i> '+params.sale.salePrice+'</span>'+
-                            '<span style="margin-left:10px;" class="price-standard '+((params.price =='nill')?"hidden":"")+'"><i class="fa fa-inr"></i> '+params.price+'</span>'+
-                        '</div>'+
+                        '<div class="product-price">'+priceTag+'</div>'+
                         '<div class="details-description">'+
                             '<p>'+params.short_description+' </p>'+
                         '</div>'+
@@ -77,10 +83,6 @@ $(document).ready(function () {
                         '</div>'+
                 '</div>';
             $('.detailsBody').html(details);
-      }
-      else{
-        $('.detailsMain').html("<h3 class ='text-center'>Oops Something went wrong ..</h3>");
-      }
     }
     else{
 

@@ -1,41 +1,106 @@
+/*** Onload function ***/
+$(function(){
+  //Getting Local storage
+  var userDetails = JSON.parse(localStorage.getItem('userDetails'));    
+  if(userDetails !== null && userDetails !== ''){    
+    getProductList(userDetails.vendor_id);
+    $('#userName').text("Hi "+userDetails.vendorDetails.firstName+userDetails.vendorDetails.lastName);
+  }
+  else{
+    window.location.href = 'index.html';
+  }
+});
+/** Add prduct Form display **/
+function addProduct(){
+  $('.productForm').show();
+  $('.productList').hide();
+  getCategoryList();
+}
+
+/** Goback **/
+function cancelUpload(){
+  $('#addProductsForm')[0].reset();
+  $('.productForm').hide();
+  $('.productList').show();
+  window.scrollTo(0,0);  
+}
+/*** Get PRoduct List ***/
+function getProductList(id){
+  $('.productForm').hide();
+  $('.productList').show();  
+  window.scrollTo(0,0);  
+  $.post("http://127.0.0.1:8080/vendor/getProductList",
+    { vendor_id : id }, function(response){
+    var params = '';
+    var productList = response.productsList;
+    if(productList.length > 0){
+      for(i = 0; i < productList.length; i++){
+        var labelColor = (productList[i].active == true) ? 'label-success' : 'label-warning' ;
+        var status = (productList[i].active == true) ? 'Active' : 'Inactive' ;
+        params += "<tr><td>"+ ( i + 1 ) +"</td>"+
+                  "<td>"+ productList[i].title +"</td>"+
+                  "<td>"+ productList[i].stocksLeft +"</td>"+
+                  "<td><span class='label "+labelColor+"'>"+ status+"</span></td>"+
+                  "<td><a onclick='viewProduct(\""+ productList[i].p_id +"\")'>View</a> | "+
+                  "<a onclick='deleteProduct(\""+productList[i].p_id +"\")'>Delete</a></td></tr>";
+      }
+      $('#listTable').html(params);
+    }
+    else{
+      $('#listTable').html('<tr><td colspan="5"><center><b>No Products found</b></center></td></tr>')
+    }    
+  });
+}
+/*** View Product ***/
+function viewProduct(p_id){
+
+}
+/*** Delete Product ***/
+function deleteProduct(p_id){
+
+}
+/*** Category Change event ***/
+$('#categoryList').change(function(){
+  getCategoryList($(this).val());
+});
+/*** Get Category List ***/
+function getCategoryList(category){ 
+  $.post('http://127.0.0.1:8080/vendor/getCategoryList', { "type": category }, function(res){
+    if(res){
+      var options = '';
+      for(i = 0; i < res.CategoryList.length; i++){
+        options += "<option value='"+res.CategoryList[i].title+"''>"+res.CategoryList[i].title+"</option>"
+      }
+    }
+    $('#subcategoryList').html(options);
+  });
+}
+/**** Add Products ****/
 $(document).ready(function(){
   $("form").submit(function(e){
-	e.preventDefault();
-  	var formData = new FormData(jQuery('#addProductsForm')[0]);
-  	console.log("formData");
-  	console.log(jQuery('input[type=file]')[0].files[0]);
- jQuery.ajax({
-   type:'POST',
-   url:"http://localhost:8080/vendor/upload",
-   data: formData,
-   processData: false,
-   contentType: false,
-   success:function(response){
-        console.log(response)
-    },
-  error:function() {
-        alert("error");
-    }
- });
-});
-});
-
-
-$(function(){
-	//Getting Local storage
-	var userDetails = JSON.parse(localStorage.getItem('userDetails'));
-	if(userDetails !== null && userDetails !== ''){
-		$('#userName').text("Hi "+userDetails.email);
-	}
-	else{
-		window.location.href = 'index.html';
-	}
+	   e.preventDefault();
+     var userDetails = JSON.parse(localStorage.getItem('userDetails'));
+     $('#vendorId').val(userDetails.vendor_id);     
+  	 var formData = new FormData(jQuery('#addProductsForm')[0]);  	
+     jQuery.ajax({
+       type:'POST',
+       url:"http://127.0.0.1:8080/vendor/addProduct",
+       data: formData,
+       processData: false,
+       contentType: false,
+        success:function(response){
+            if(response.http_code == 200){
+              alert("Added successful..");
+              getProductList(userDetails.vendor_id);
+            }
+        },
+        error:function() {
+            alert("error");
+        }
+     });
+  });
 });
 
-function logoutVendor(){
-	localStorage.clear();
-	window.location.href = 'index.html';
-}
 //Change the image url
 $('#thumbImgBtn').change(function(){
         readURL(this, "thumbnail");
@@ -55,50 +120,8 @@ function readURL(input, id) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-
-// $('#addProductsForm').submit(function(e){
-// 	// addProduct();
-// 	// return false;
-// 	console.log($(this));
-// 		e.preventDefault();
-// 		var formData = new FormData($('#addProductsForm'));
-//         //var formData = new FormData($('#addProductsForm')[0]);
-//         console.log(formData);
-//          $.ajax({
-// 		    url: 'http://localhost:8080/vendor/testProduct',
-// 		    type: 'POST',
-// 		    data: formData,
-// 		    async: false,
-// 		    cache: false,
-// 		    contentType: false,
-// 		    processData: false,
-// 		    success: function (returndata) {
-// 		      alert(returndata);
-// 		    }
-// 		  });
-//         // jQuery.ajax({
-//         //     url: 'http://localhost:8080/vendor/testProduct',
-//         //     data: data,
-//         //     cache: false,
-//         //     contentType: false,
-//         //     processData: false,
-//         //     type: 'POST',
-//         //     success: function(data){
-//         //         console.log(data);
-//         //         console.log(data.data.thumb_url);
-//         //         console.log(data.data.img_url);
-//         //     }
-//         // });
-// });
-
-// function addProduct(){
-// 	var fileData = new FormData($('#thumbImgBtn').files[0]);
-	
-// 	console.log(fileData);
-	
-// 	 $.post('http://localhost:8080/vendor/testProduct', fileData , function(res, status, xhr){
-// 	    if(res.status == 200){
-
-// 	    }
-// 	 }); 
-// };
+/*** Logout and Local storage clear ****/
+function logoutVendor(){
+  localStorage.clear();
+  window.location.href = 'index.html';
+}

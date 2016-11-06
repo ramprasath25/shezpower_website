@@ -30,149 +30,6 @@
 </head>
 
 <body>
-
-<!-- Modal Login start -->
-<div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog">
-    <form method="post" action=""><div class="modal-dialog ">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-                <h3 class="modal-title-site text-center"> Login </h3>
-            </div>
-            <div class="modal-body">
-                <div class="form-group login-username">
-                    <div>
-                        <input name="log" id="login-user" class="form-control input" size="20"
-                               placeholder="Enter Username" type="text">
-                    </div>
-                </div>
-                <div class="form-group login-password">
-                    <div>
-                        <input name="Password" id="login-password" class="form-control input" size="20"
-                               placeholder="Password" type="password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div>
-                        <div class="checkbox login-remember">
-                            <label>
-                                <input name="rememberme" value="forever" checked="checked" type="checkbox">
-                                Remember Me </label>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <input name="submit" class="btn  btn-block btn-lg btn-primary" value="LOGIN" type="submit">
-                    </div>
-                </div>
-                <!--userForm-->
-              </form>
-            </div>
-            <div class="modal-footer">
-                <p class="text-center"> Not here before? <a data-toggle="modal" data-dismiss="modal"
-                                                            href="#ModalSignup"> Sign Up. </a> <br>
-                    <a href="#ModalForgot" data-toggle="modal" data-dismiss="modal"> Lost your password? </a></p>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-
-    </div>
-    <!-- /.modal-dialog -->
-
-</div>
-<!-- /.Modal Login -->
-<!-- Modal ForgotPassword start -->
-<div class="modal signUpContent fade" id="ModalForgot" tabindex="-1" role="dialog">
-    <form method="post" action=""><div class="modal-dialog ">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-                <h3 class="modal-title-site text-center"> Forgot Password </h3>
-            </div>
-            <div class="modal-body">
-                <div class="form-group login-username">
-                    <div>
-                        <input name="log" id="login-user" class="form-control input" size="20"
-                               placeholder="Enter Email id registered" type="text">
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <input name="submit" class="btn  btn-block btn-lg btn-primary" value="SUBMIT" type="submit">
-                    </div>
-                </div>
-                <!--userForm-->
-              </form>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-
-</div>
-<!-- Modal Signup start -->
-<div class="modal signUpContent fade" id="ModalSignup" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-                <h3 class="modal-title-site text-center"> SIGNUP </h3>
-            </div>
-            <div class="modal-body">
-                <div class="control-group"><a class="fb_button btn  btn-block btn-lg " href="#"> SIGNUP WITH
-                    FACEBOOK </a></div>
-                <h5 style="padding:10px 0 10px 0;" class="text-center"> OR </h5>
-
-                <div class="form-group reg-username">
-                    <div>
-                        <input name="login" class="form-control input" size="20" placeholder="Enter Username"
-                               type="text">
-                    </div>
-                </div>
-                <div class="form-group reg-email">
-                    <div>
-                        <input name="reg" class="form-control input" size="20" placeholder="Enter Email" type="text">
-                    </div>
-                </div>
-                <div class="form-group reg-password">
-                    <div>
-                        <input name="password" class="form-control input" size="20" placeholder="Password"
-                               type="password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div>
-                        <div class="checkbox login-remember">
-                            <label>
-                                <input name="rememberme" id="rememberme" value="forever" checked="checked"
-                                       type="checkbox">
-                                Remember Me </label>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <input name="submit" class="btn  btn-block btn-lg btn-primary" value="REGISTER" type="submit">
-                    </div>
-                </div>
-                <!--userForm-->
-
-            </div>
-            <div class="modal-footer">
-                <p class="text-center"> Already member? <a data-toggle="modal" data-dismiss="modal" href="#ModalLogin">
-                    Sign in </a></p>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-
-    </div>
-    <!-- /.modal-dialog -->
-
-</div>
-<!-- /.ModalSignup End -->
-
 <!-- Fixed navbar start -->
 <div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
     <div class="navbar-top">
@@ -181,7 +38,6 @@
                 <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
                     <div class="pull-left ">
                         <ul class="userMenu ">
-
                             <li class="phone-number"><a href="callto:+919886121604"> <span> <i
                                     class="glyphicon glyphicon-phone-alt "></i></span> <span class="hidden-xs"
                                                                                              style="margin-left:5px">+91 9886 121 604 </span>
@@ -193,10 +49,9 @@
                     <div class="pull-right">
                         <ul class="userMenu">
 
-                            <li><a href="#" data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span>
+                            <li><a href="login.html"> <span class="hidden-xs">Sign In</span>
                                 <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a></li>
-                            <li class="hidden-xs"><a href="#" data-toggle="modal" data-target="#ModalSignup"> Sign Up </a></li>
-                            <li class="hidden-xs"><a href="register.html"> Store </a></li>
+                            <li class="hidden-xs"><a href="register.html"> Sign Up </a></li>
                         </ul>
                     </div>
                 </div>
@@ -204,7 +59,6 @@
         </div>
     </div>
     <!--/.navbar-top-->
-
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
@@ -213,26 +67,21 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"><i
                     class="fa fa-shopping-cart colorWhite"> </i> <span
                     class="cartRespons colorWhite"> Cart</span></button>
-            <a class="navbar-brand " href="index.html"> <img src="images/logo.png" alt="TSHOP"> </a>
-
+            <a class="navbar-brand " href="index.html"> <img src="images/logo.png" alt="shezpower"> </a>
             <!-- this part for mobile -->
             <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
                 <div class="input-group">
                     <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
                 </div>
                 <!-- /input-group -->
-
             </div>
         </div>
-
-                <!--/.navbar-cart-->
-
+        <!--/.navbar-cart-->
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#"> Home </a></li>
                 <li class="dropdown megamenu-fullwidth"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
                     Products <b class="caret"> </b> </a>
-
                     <ul class="dropdown-menu">
                         <li class="megamenu-content">
                             <!-- megamenu-content -->
@@ -242,47 +91,43 @@
                                 <li class="no-border">
                                     <p><strong>  Clothing & Accessories</strong></p>
                                 </li>
-                                <li><a href="products.html?cat=pr_01"> Various designer suit</a></li>
-                                <li><a href="products.html?cat=pr_02"> Designer Saree </a></li>
-                                <li><a href="products.html?cat=pr_03"> Designer Dress Material </a></li>
-                                <li><a href="products.html?cat=pr_04"> Designer Baby clothes</a></li>
-                                <li><a href="products.html?cat=pr_05"> Handmade Jewelry</a></li>
+                                <li><a href="products.html?cat=Various designer suit"> Various designer suit</a></li>
+                                <li><a href="products.html?cat=Designer Saree"> Designer Saree </a></li>
+                                <li><a href="products.html?cat=Designer Dress Material"> Designer Dress Material </a></li>
+                                <li><a href="products.html?cat=Designer Baby clothes"> Designer Baby clothes</a></li>
+                                <li><a href="products.html?cat=Handmade Jewelry"> Handmade Jewelry</a></li>
                             </ul>
-
                             <ul class="col-lg-3  col-sm-3 col-md-3 unstyled">
                                 <li class="no-border">
                                     <p><strong>Home-made Delicacies</strong></p>
                                 </li>
-                                <li><a href="products.html?cat=pr_06"> Cakes / Pastries </a></li>
-                                <li><a href="products.html?cat=pr_07"> Papad / Sweet / Pickle </a></li>
+                                <li><a href="products.html?cat=Cakes/ Pastries"> Cakes/ Pastries </a></li>
+                                <li><a href="products.html?cat=Papad/ Sweet/ Pickle"> Papad/ Sweet/ Pickle </a></li>
                             </ul>
-
                             <ul class="col-lg-3  col-sm-3 col-md-3 unstyled ">
                                 <li class="no-border">
                                     <p><strong>  Home Furnishing </strong></p>
                                 </li>
-                                <li><a href="products.html?cat=pr_08">Glass designing</a></li>
-                                <li><a href="products.html?cat=pr_09">Curtain</a></li>
-                                <li><a href="products.html?cat=pr_10">Cushion / Pillow cover / Bed Spread</a></li>
-                                <li><a href="products.html?cat=pr_11"> Tablecloths</a></li>
-                                <li><a href="products.html?cat=pr_12"> Designer light shades
+                                <li><a href="products.html?cat=Glass designing">Glass designing</a></li>
+                                <li><a href="products.html?cat=Curtain">Curtain</a></li>
+                                <li><a href="products.html?cat=Cushion/ Pillow cover/ Bed Spread">Cushion/ Pillow cover/ Bed Spread</a></li>
+                                <li><a href="products.html?cat=Tablecloths"> Tablecloths</a></li>
+                                <li><a href="products.html?cat=Designer light shades"> Designer light shades
                                    <!-- <span  class="label label-success">NEW</span>  -->
                                  </a></li>
                             </ul>
-
                             <ul class="col-lg-3  col-sm-3 col-md-3 unstyled">
                                 <li class="no-border">
                                     <p><strong> Art & Craft </strong></p>
                                 </li>
-                                <li><a href="products.html?cat=pr_13">Glass Painting</a></li>
-                                <li><a href="products.html?cat=pr_14"> Jute Products </a></li>
-                                <li><a href="products.html?cat=pr_15"> Painting </a></li>
+                                <li><a href="products.html?cat=Glass Painting">Glass Painting</a></li>
+                                <li><a href="products.html?cat=Jute Products"> Jute Products </a></li>
+                                <li><a href="products.html?cat=Painting"> Painting </a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
             </li>
-
                 <!-- change width of megamenu = use class > megamenu-fullwidth, megamenu-60width, megamenu-40width -->
                 <li class="dropdown megamenu-80width "><a data-toggle="dropdown" class="dropdown-toggle" href="#"> SERVICES
                     <b class="caret"> </b> </a>
@@ -290,35 +135,34 @@
                         <li class="megamenu-content">
                             <h3 class="promo-1sub hidden-xs">SERVICES</h3>
                             <!-- megamenu-content -->
-
                             <ul class="col-lg-3  col-sm-3 col-md-3  unstyled noMarginLeft">
                                 <li>
                                     <p><strong>  Events Organizer </strong></p>
                                 </li>
-                                <li><a href="services.html?cat=se_01"> Birthday Party organizer </a></li>
-                                <li><a href="services.html?cat=se_02"> Wedding planner </a></li>
-                                <li><a href="services.html?cat=se_03"> Catering Services </a></li>
+                                <li><a href="services.html?cat=Birthday Party organizer"> Birthday Party organizer </a></li>
+                                <li><a href="services.html?cat=Wedding planner"> Wedding planner </a></li>
+                                <li><a href="services.html?cat=Catering Services"> Catering Services </a></li>
                             </ul>
                             <ul class="col-lg-3  col-sm-3 col-md-3  unstyled">
                                 <li>
                                     <p><strong>Skilled professional services </strong></p>
                                 </li>
-                                <li><a href="services.html?cat=se_04"> Content Write / Blog Writer </a></li>
-                                <li><a href="services.html?cat=se_05"> Web designer</a></li>
+                                <li><a href="services.html?cat=Content Write/ Blog Writer"> Content Write/ Blog Writer </a></li>
+                                <li><a href="services.html?cat=Web designer"> Web designer</a></li>
                             </ul>
                             <ul class="col-lg-3  col-sm-3 col-md-3  unstyled">
                                 <li>
                                     <p><strong> Child-care Training & other services</strong></p>
                                 </li>
-                                <li><a href="services.html?cat=se_06"> Material based learning </a></li>
-                                <li><a href="services.html?cat=se_07"> Theme based learning session </a></li>
-                                <li><a href="services.html?cat=se_08"> Science based coaching</a></li>
-                                <li><a href="services.html?cat=se_09">Yoga training </a></li>
+                                <li><a href="services.html?cat=Material based learning"> Material based learning </a></li>
+                                <li><a href="services.html?cat=Theme based learning session"> Theme based learning session </a></li>
+                                <li><a href="services.html?cat=Science based coaching"> Science based coaching</a></li>
+                                <li><a href="services.html?cat=Yoga training">Yoga training </a></li>
                             </ul>
                             <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-6">
                                 <li class="no-margin productPopItem "><a href="product-details.html"> <img
                                         class="img-responsive" src="images/site/g4.jpg" alt="img"> </a> <a
-                                        class="text-center productInfo alpha90" href="services.html?cat=se_04">  Content Write / Blog Writer<br>
+                                        class="text-center productInfo alpha90" href="services.html?cat=Content Write/ Blog Writer">  Content Write/ Blog Writer<br>
                                    </a></li>
                             </ul>
                         </li>
@@ -333,27 +177,27 @@
                                 <li class="no-border">
                                     <p><strong> Long Term course: Upto1 year</strong></p>
                                 </li>
-                                <li><a href="skill.html?cat=sk_01"> Women Entrepreneurship Development Program</a></li>
+                                <li><a href="skill.html?cat=Women Entrepreneurship Development Program"> Women Entrepreneurship Development Program</a></li>
                             </ul>
                             <ul class="col-lg-4 col-sm-4 col-md-4 unstyled noMarginLeft">
                                 <li class="no-border">
                                     <p><strong> Mid Term course: 3-6 months course</strong></p>
                                 </li>
-                                <li><a href="skill.html?cat=sk_02"> Image consulting</a></li>
-                                <li><a href="skill.html?cat=sk_03"> Digital marketing</a></li>
+                                <li><a href="skill.html?cat=Image consulting"> Image consulting</a></li>
+                                <li><a href="skill.html?cat=Digital marketing"> Digital marketing</a></li>
                             </ul>
                             <ul class="col-lg-4 col-sm-4 col-md-4 unstyled noMarginLeft">
                                 <li class="no-border">
                                     <p><strong> Short Term course : upto 30 days</strong></p>
                                 </li>
-                                <li><a href="skill.html?cat=sk_05"> Cooking & Baking class</a></li>
-                                <li><a href="skill.html?cat=sk_06"> Jewellery Making class</a></li>
-                                <li><a href="skill.html?cat=sk_07"> Design/Decoration class</a></li>
+                                <li><a href="skill.html?cat=Cooking/ Baking class"> Cooking/ Baking class</a></li>
+                                <li><a href="skill.html?cat=Jewellery Making class"> Jewellery Making class</a></li>
+                                <li><a href="skill.html?cat=Design/ Decoration class"> Design/ Decoration class</a></li>
                             </ul>
                         </li>
                     </ul>
+                </li>
             </ul>
-
             <!--- this part will be hidden for mobile version -->
             <div class="nav navbar-nav navbar-right hidden-xs">
                 <div class="dropdown  cartMenu "><a href="cart.html" class="dropdown-toggle"> <i
@@ -361,25 +205,20 @@
                     <!--/.dropdown-menu-->
                 </div>
                 <!--/.cartMenu-->
-
                 <div class="search-box">
                     <div class="input-group">
                         <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
                     </div>
                     <!-- /input-group -->
-
                 </div>
                 <!--/.search-box -->
             </div>
             <!--/.navbar-nav hidden-xs-->
         </div>
         <!--/.nav-collapse -->
-
     </div>
     <!--/.container -->
-
     <div class="search-full text-right"><a class="pull-right search-close"> <i class=" fa fa-times-circle"> </i> </a>
-
         <div class="searchInputBox pull-right">
             <input type="search" data-searchurl="search?=" name="q" placeholder="start typing and hit enter to search"
                    class="search-input">
@@ -387,7 +226,6 @@
         </div>
     </div>
     <!--/.search-full-->
-
 </div>
 <!-- /.Fixed navbar  -->
 
@@ -397,10 +235,8 @@
             <ul id="pager2" class="container">
             </ul>
             <!-- prev/next links -->
-
             <span class="prevControl sliderControl"> <i class="fa fa-angle-left fa-3x "></i></span> <span
                 class="nextControl sliderControl"> <i class="fa fa-angle-right fa-3x "></i></span>
-
             <div class="slider slider-v1"
                  data-cycle-swipe=true
                  data-cycle-prev=".prevControl"
@@ -424,8 +260,6 @@
                     </div>
                     <img src="images/slider/slider1.jpg" class="img-responsive parallaximg sliderImg" alt="img"></div>
                 <!--/.slider-item-->
-                <!--/.slider-item-->
-
                 <div class="slider-item slider-item-img3 ">
                     <div class="sliderInfo">
                         <div class="container">
@@ -440,7 +274,6 @@
                     </div>
                     <img src="images/slider/slider3.jpg" class="img-responsive parallaximg sliderImg" alt="img"></div>
                 <!--/.slider-item-->
-
                 <div class="slider-item slider-item-img3">
                     <div class="sliderInfo">
                         <div class="container">
@@ -465,333 +298,45 @@
 <!--/.banner style1-->
 </div>
 <div class="container main-container">
-
-    <!-- Main component call to action -->
-
+        <!-- Feature Products -->
         <div class="morePost row featuredPostContainer style2 globalPaddingTop ">
-            <h3 class="section-title style2 text-center"><span>FEATURE PRODUCTS</span></h3>
+            <h3 class="section-title style2 text-center"><span>Feature Products</span></h3>
 
-            <div class="container product_list">
-               <!--/.Feature Productss comes here-->
-            </div>
+            <div class="container" id="featureProducts"></div>
             <!--/.container-->
         </div>
-    <!--/.featuredPostContainer-->
 </div>
 <!-- /main container -->
-
+<!-- Message -->
 <div class="parallax-section parallax-image-1">
     <div class="container">
         <div class="row ">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="parallax-content clearfix">
-
                     <h2 class="uppercase">"Throw your dreams into space like a kite, and you do not know what it will bring back, a new life, a new friend, a new love, a new country.”</h2>
                     <br/>
                     <h3> Anais Nin </h3>
-
                     <div style="clear:both"></div>
                     </div>
             </div>
         </div>
         <!--/.row-->
-
     </div>
     <!--/.container-->
 </div>
-<!--/.parallax-image-1-->
-
+<!-- /.Message -->
 <div class="container main-container">
-
-
-    <!-- Demo Features Content start -->
-
         <div class="morePost row featuredPostContainer style2 globalPaddingTop ">
-            <h3 class="section-title style2 text-center"><span>FEATURE SERVICES</span></h3>
-
-            <div class="container">
-                <div class="row xsResponse">
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                               data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
-
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                       data-target="#productSetailsModalAjax">View </a>
-                                </div>
-                                <a href="product-details.html"><img src="images/product/30.jpg" alt="img"
-                                                                    class="img-responsive"></a>
-
-                                <div class="promotion"> <span
-                                        class="discount">15% OFF</span></div>
-                            </div>
-                            <div class="description">
-                                <h4><a href="product-details.html">aliquam erat volutpat</a></h4>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </div>
-                            <div class="price"><i class="fa fa-inr"></i> <span>25</span> <span class="old-price"><i class="fa fa-inr"></i> 75</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                    class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                        </div>
-                    </div>
-                    <!--/.item-->
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                               data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
-
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                       data-target="#productSetailsModalAjax">View </a>
-                                </div>
-                                <a href="product-details.html"><img src="images/product/31.jpg" alt="img"
-                                                                    class="img-responsive"></a>
-
-                                <div class="promotion"><span class="discount">15% OFF</span></div>
-                            </div>
-                            <div class="description">
-                                <h4><a href="product-details.html">ullamcorper suscipit lobortis </a></h4>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </div>
-                            <div class="price"><i class="fa fa-inr"></i> <span>25</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                    class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                        </div>
-                    </div>
-                    <!--/.item-->
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                               data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
-
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                       data-target="#productSetailsModalAjax">View </a>
-                                </div>
-                                <a href="product-details.html"><img src="images/product/34.jpg" alt="img"
-                                                                    class="img-responsive"></a>
-
-                                <div class="promotion"></div>
-                            </div>
-                            <div class="description">
-                                <h4><a href="product-details.html">demonstraverunt lectores </a></h4>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </div>
-                            <div class="price"><i class="fa fa-inr"></i> <span>25</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                    class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                        </div>
-                    </div>
-                    <!--/.item-->
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                               data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
-
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                       data-target="#productSetailsModalAjax">View </a>
-                                </div>
-                                <a href="product-details.html"><img src="images/product/12.jpg" alt="img"
-                                                                    class="img-responsive"></a></div>
-                            <div class="description">
-                                <h4><a href="product-details.html">humanitatis per</a></h4>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </div>
-                            <div class="price"><i class="fa fa-inr"></i> <span>25</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                    class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                        </div>
-                    </div>
-                    <!--/.item-->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="load-more-block text-center"><a class="btn btn-thin" href="services.html?cat=all">
-                       load more </a></div>
-                </div>
-            </div>
+            <h3 class="section-title style2 text-center"><span>Feature Services</span></h3>
+            <div class="container" id="featureServices"></div>
             <!--/.container-->
         </div>
-    <!-- Demo Features Content end -->
-
-    <!-- Main component call to action -->
-
+    <!-- Feature Skills -->
     <div class="morePost row featuredPostContainer style2 globalPaddingTop ">
-        <h3 class="section-title style2 text-center"><span>SKILLS</span></h3>
-
-        <div class="container product_list">
-            <div class="row xsResponse ">
-                <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="product">
-                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                           data-placement="left">
-                            <i class="glyphicon glyphicon-heart"></i>
-                        </a>
-
-                        <div class="image">
-                            <div class="quickview">
-                                <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                   data-target="#productSetailsModalAjax">View </a>
-                            </div>
-                            <a href="product-details.html"><img src="images/product/30.jpg" alt="img"
-                                                                class="img-responsive"></a>
-
-                            <div class="promotion"> <span
-                                    class="discount">15% OFF</span></div>
-                        </div>
-                        <div class="description">
-                            <h4><a href="product-details.html">aliquam erat volutpat</a></h4>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        <div class="price"><i class="fa fa-inr"></i> <span>25</span> <span class="old-price"><i class="fa fa-inr"></i> 75</span></div>
-                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                    </div>
-                </div>
-                <!--/.item-->
-                <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="product">
-                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                           data-placement="left">
-                            <i class="glyphicon glyphicon-heart"></i>
-                        </a>
-
-                        <div class="image">
-                            <div class="quickview">
-                                <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                   data-target="#productSetailsModalAjax">View </a>
-                            </div>
-                            <a href="product-details.html"><img src="images/product/31.jpg" alt="img"
-                                                                class="img-responsive"></a>
-
-                            <div class="promotion"><span class="discount">15% OFF</span></div>
-                        </div>
-                        <div class="description">
-                            <h4><a href="product-details.html">ullamcorper suscipit lobortis </a></h4>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        <div class="price"><i class="fa fa-inr"></i> <span>25</span></div>
-                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                    </div>
-                </div>
-                <!--/.item-->
-                <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="product">
-                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                           data-placement="left">
-                            <i class="glyphicon glyphicon-heart"></i>
-                        </a>
-
-                        <div class="image">
-                            <div class="quickview">
-                                <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                   data-target="#productSetailsModalAjax">View </a>
-                            </div>
-                            <a href="product-details.html"><img src="images/product/34.jpg" alt="img"
-                                                                class="img-responsive"></a>
-
-                            <div class="promotion"></div>
-                        </div>
-                        <div class="description">
-                            <h4><a href="product-details.html">demonstraverunt lectores </a></h4>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        <div class="price"><i class="fa fa-inr"></i> <span>25</span></div>
-                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                    </div>
-                </div>
-                <!--/.item-->
-                <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="product">
-                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-                           data-placement="left">
-                            <i class="glyphicon glyphicon-heart"></i>
-                        </a>
-
-                        <div class="image">
-                            <div class="quickview">
-                                <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html"
-                                   data-target="#productSetailsModalAjax">View </a>
-                            </div>
-                            <a href="product-details.html"><img src="images/product/12.jpg" alt="img"
-                                                                class="img-responsive"></a></div>
-                        <div class="description">
-                            <h4><a href="product-details.html">humanitatis per</a></h4>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        <div class="price"><i class="fa fa-inr"></i> <span>25</span></div>
-                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
-                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                    </div>
-                </div>
-                <!--/.item-->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="load-more-block text-center"><a class="btn btn-thin" href="skill.html?cat=all">
-                   load more </a></div>
-            </div>
-        </div>
-        <!--/.container-->
+        <h3 class="section-title style2 text-center"><span>Feature Skills</span></h3>
+        <div class="container" id="featuredSkills"></div>
     </div>
-    <!--/.featuredPostContainer-->
-<!--
-    <div class="width100 section-block">
-        <h3 class="section-title"><span> BRAND</span> <a id="nextBrand" class="link pull-right carousel-nav"> <i
-                class="fa fa-angle-right"></i></a> <a id="prevBrand" class="link pull-right carousel-nav"> <i
-                class="fa fa-angle-left"></i> </a></h3>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="no-margin brand-carousel owl-carousel owl-theme">
-                    <li><a><img src="images/brand/1.gif" alt="img"></a></li>
-                    <li><img src="images/brand/2.png" alt="img"></li>
-                    <li><img src="images/brand/3.png" alt="img"></li>
-                    <li><img src="images/brand/4.png" alt="img"></li>
-                    <li><img src="images/brand/5.png" alt="img"></li>
-                    <li><img src="images/brand/6.png" alt="img"></li>
-                    <li><img src="images/brand/7.png" alt="img"></li>
-                    <li><img src="images/brand/8.png" alt="img"></li>
-                    <li><img src="images/brand/1.gif" alt="img"></li>
-                    <li><img src="images/brand/2.png" alt="img"></li>
-                    <li><img src="images/brand/3.png" alt="img"></li>
-                    <li><img src="images/brand/4.png" alt="img"></li>
-                    <li><img src="images/brand/5.png" alt="img"></li>
-                    <li><img src="images/brand/6.png" alt="img"></li>
-                    <li><img src="images/brand/7.png" alt="img"></li>
-                    <li><img src="images/brand/8.png" alt="img"></li>
-                </ul>
-            </div>
-        </div>
-        <!--/.row-->
-    </div> -->
-
-    <!--/.section-block-->
-
+    <!--/. Feature Skills -->
 </div>
 <!--main-container-->
 
@@ -852,13 +397,13 @@
                     </ul>
                 </div>
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> My Account </h3>
+                    <!-- <h3> My Account </h3>
                     <ul>
                         <li><a href="account.html"> My Account </a></li>
                         <li><a href="my-address.html"> My Address </a></li>
                         <li><a href="order-list.html"> Order list </a></li>
                         <li><a href="order-status.html"> Order Status </a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div style="clear:both" class="hide visible-xs"></div>
                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
@@ -899,8 +444,7 @@
 </footer>
 
 
-<!-- Le javascript
-================================================== -->
+<!--  javascript -->
 
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
@@ -942,55 +486,7 @@
 <script src="assets/js/home.js"></script>
 <!-- include custom script for site  -->
 <script src="assets/js/script.js"></script>
-<script>
-$.post('http://128.199.142.243:8080/user/listProducts',{"cat_id":"pr_10"},function(res){
-    if(res.http_code == 200){
-      var params = res.products;
-      var productList = '';
-      if(params.length > 0){
-      for(i = 0; i < 3; i++ ){
-
-            productList += '<div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6">\
-              <div class="product">\
-                  <a class="add-fav tooltipHere" data-toggle="tooltip" \
-                     data-original-title="Add to Wishlist" data-placement="left">\
-                      <i class="glyphicon glyphicon-heart"></i>\
-                  </a>\
-                  <div class="image">\
-                      <div class="quickview">\
-                          <a  class="btn btn-xs btn-quickview" \
-                             href="product-details.html?p_id='+params[i].p_id+'">View </a>\
-                      </div>\
-                      <a href="product-details.html?p_id='+params[i].p_id+'"><img src="'+params[i].img.thumbnail+'" alt="img" class="img-responsive"></a>\
-                      <div class="promotion '+((params[i].sale.discount =='nill')?"hidden":"")+'"> <span class="discount">'+params[i].sale.discount+' OFF</span></div>\
-                  </div>\
-                  <div class="description">\
-                      <h4><a href="product-details.html">'+params[i].title+'</a></h4>\
-                      <div class="grid-description">\
-                          <p>'+params[i].short_description+' </p>\
-                      </div>\
-                      <div class="list-description">\
-                          <p> '+params[i].description +' </p>\
-                      </div>\
-                    </div>\
-                  <div class="price"><span class="old-price '+((params[i].price =='nill')?"hidden":"")+'"><i class="fa fa-inr"></i> '+params[i].price+'</span> <i class="fa fa-inr"></i> <span>'+params[i].sale.salePrice+'</span> </div>\
-                  <div class="action-control"><a class="btn btn-primary"> <span class="add2cart">\
-                  <i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a>\
-                  </div>\
-              </div>\
-          </div>'
-        }
-      $('.product_list').html(productList);
-      }
-      else{
-        $('.product_list').html('<h3 class ="text-center" >No Products found</h3>');
-      }
-    }
-    else{
-        $('.product_list').html("<h3 class ='text-center'>Oops Something went wrong ..</h3>");
-    }
-  });
-
-</script>
+<!-- Include Homepage feature items -->
+<script src="ajax/homepage.js"></script>
 </body>
 </html>

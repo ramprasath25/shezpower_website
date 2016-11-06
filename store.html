@@ -109,10 +109,30 @@
   <!-- /.Fixed navbar  -->
 <div class="container main-container headerOffset">    
     <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-7">
+        <div class="col-lg-12">
             <h1 class="section-title-inner"><span><i
-                    class="glyphicon glyphicon-credit-card"></i> Upload Products </span></h1>
-            <div class="row userInfo">
+                    class="glyphicon glyphicon-credit-card"></i> Products Dashboard</span></h1>
+            <!-- Product List -->
+            <div class="row productList">
+                <div class="col-lg-12 text-right">
+                  <button class="btn btn-success" onclick="addProduct()"> Add</button>
+                </div>                
+                <div class="col-lg-12" style="margin-top:10px;">
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <th width="2%">S.no</th>
+                      <th width="40%">Title</th>
+                      <th width="20%">Stocks</th>
+                      <th width="20%">Status</th>
+                      <th width="18%">Action</th>
+                    </thead>
+                    <tbody id="listTable"></tbody>
+                  </table>
+                </div>
+            </div>
+            <!-- /Product List -->
+            <!-- Add Product Form -->
+            <div class="row productForm" style="display:none">
                 <div class="col-lg-12">
                     <h2 class="block-title-2"> Please be sure to update your product information if it has
                         changed. </h2>
@@ -127,19 +147,27 @@
                         <div class="form-group required">
                             <label>Short description <sup>*</sup> </label>
                             <input type="text" class="form-control" placeholder="Short Description" name="short_description">
-                        </div>                        
-                    </div>
-                    <div class="col-xs-12 col-sm-6">                        
-                        <div class="form-group required">
-                            <label> Category </label>
-                            <select name="cat_id">
-                              <option>Product</option>
-                              <option>Service</option>
-                            </select>
-                        </div>
+                        </div>  
                         <div class="form-group required">
                             <label> Description <sup> * </sup> </label>
                             <textarea name="description" class="form-control" name="description"></textarea>
+                        </div>                      
+                    </div>
+                    <div class="col-xs-12 col-sm-6">                        
+                        <div class="form-group required">
+                            <label> Category  <sup>*</sup></label>
+                            <select name="category" id="categoryList">
+                              <option value="">Choose</option>
+                              <option value="Products">Products</option>
+                              <option value="Services">Services</option>
+                              <option value="Skill Development">Skill Development</option>
+                            </select>
+                        </div>
+                        <div class="form-group required">
+                            <label>Sub Category  <sup>*</sup></label>
+                            <select name="sub_category" id="subcategoryList">
+                              <option value="">Choose</option>
+                            </select>
                         </div>
                         
                     </div> 
@@ -172,42 +200,53 @@
                         </div>
                       </div> 
                       <div class="col-lg-12"><hr/><h3>Specification</h3></div>
-                        <div class="col-xs-12 col-sm-12">
+                        
+                        <div class="col-xs-12 col-sm-6">
                           <div class="form-group">
                             <label>Unit of Measurement</label>
                             <input  type="text" class="form-control" name="unitOfMeasurement" placeholder="eg : piece, size..">
                           </div>
+                          <div class="form-group required">
+                            <label>Stocks <sup>*</sup></label>
+                            <input  type="text" class="form-control" name="stocksLeft" placeholder="Stocks Left">
+                          </div>
+                          
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                          <input  type="text" class="form-control" name="specsTitle" placeholder="Specification Title">
-                        </div>
-                        <div class="col-xs-12 col-sm-6" style="border-left: 1px dotted #666">
-                          <input  type="text" class="form-control" name="specs" placeholder="Specification">
+                          <div class="form-group">
+                            <label>Shipping Details</label>
+                            <input  type="text" class="form-control" name="shippingDetail" placeholder="2 days">
+                          </div>
                         </div>
                       <div class="col-lg-12"><hr/><h3>Images</h3></div> 
                         <div class="col-xs-12 col-sm-6">
-                          <label for="thumbnail">Thumbnail Image (285px X 380px)</label>
-                          <input id="thumbImgBtn" name="thumbnail_img" class="input-file" type="file" style="margin: 10px"> 
+                          <div class="form-group required">
+                            <label for="thumbnail">Thumbnail Image (285px X 380px)</label>
+                            <input id="thumbImgBtn" name="thumbnail_img" class="input-file" type="file" style="margin: 10px"> 
+                          </div>
                           <img id="thumbnail" src="images/noimage.jpg" class="img-thumbnail" alt="your image" style="width:275px; height:275px" />
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                          <label for="mainImage">Main Image (600px X 600px)</label>
-                          <input id="mainImgBtn" class="input-file" name="detail_img" type="file" style="margin: 10px"> 
+                          <div class="form-group required">
+                            <label for="mainImage">Main Image (600px X 600px)</label>
+                            <input id="mainImgBtn" class="input-file" name="detail_img" type="file" style="margin: 10px"> 
+                          </div>
                           <img id="mainImage" src="images/noimage.jpg" class="img-thumbnail" alt="your image" style="width:275px; height:275px"/>
                         </div>
                        <div class="col-lg-12"><hr/><h3></div> 
-                    <div class="col-lg-12">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> &nbsp; Save</button>
+                    <div class="col-lg-2">
+                      <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> &nbsp; Save</button>
                     </div>
-                </form>                
+                    <div class="col-lg-2">
+                      <button class="btn btn-default" type="button" onclick="cancelUpload()"> &nbsp; Cancel</button>
+                    </div>
+                    <input type="hidden" name="vendor_id" value="test" id="vendorId"/>
+                </form>
             </div>
-            <!--/row end-->
-
+           <!-- /Add Product Form -->
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-5"></div>
     </div>
     <!--/row-->
-
     <div style="clear:both"></div>
 </div>
 <!-- /main-container -->
@@ -258,13 +297,13 @@
                     </ul>
                 </div>
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> My Account </h3>
+                    <!-- <h3> My Account </h3>
                     <ul>
                         <li><a href="account.html"> My Account </a></li>
                         <li><a href="my-address.html"> My Address </a></li>
                         <li><a href="order-list.html"> Order list </a></li>
                         <li><a href="order-status.html"> Order Status </a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div style="clear:both" class="hide visible-xs"></div>
                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
