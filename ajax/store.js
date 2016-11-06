@@ -29,7 +29,7 @@ function getProductList(id){
   $('.productForm').hide();
   $('.productList').show();  
   window.scrollTo(0,0);  
-  $.post("http://127.0.0.1:8080/vendor/getProductList",
+  $.post("http://139.59.5.183:8080/vendor/getProductList",
     { vendor_id : id }, function(response){
     var params = '';
     var productList = response.productsList;
@@ -65,7 +65,7 @@ $('#categoryList').change(function(){
 });
 /*** Get Category List ***/
 function getCategoryList(category){ 
-  $.post('http://127.0.0.1:8080/vendor/getCategoryList', { "type": category }, function(res){
+  $.post('http://139.59.5.183:8080/vendor/getCategoryList', { "type": category }, function(res){
     if(res){
       var options = '';
       for(i = 0; i < res.CategoryList.length; i++){
@@ -84,7 +84,7 @@ $(document).ready(function(){
   	 var formData = new FormData(jQuery('#addProductsForm')[0]);  	
      jQuery.ajax({
        type:'POST',
-       url:"http://127.0.0.1:8080/vendor/addProduct",
+       url:"http://139.59.5.183:8080/vendor/addProduct",
        data: formData,
        processData: false,
        contentType: false,

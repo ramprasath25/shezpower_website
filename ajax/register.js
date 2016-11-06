@@ -5,7 +5,7 @@ $('#registraionForm').submit(function () {
 });
 //http://128.199.142.243:8080/
 function registerBusiness(){
-	 $.post('http://127.0.0.1:8080/vendor/register', $('#registraionForm').serialize() , function(res, status, xhr){
+	 $.post('http://139.59.5.183:8080/vendor/register', $('#registraionForm').serialize() , function(res, status, xhr){
 	    if(res.status == 200){
 	      $('#registraionForm')[0].reset();
 	      window.alert("Thank you for registering with us.. We'll send a mail once it is confirmed..");

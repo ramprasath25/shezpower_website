@@ -1,5 +1,5 @@
 function loginVendor(){
-	$.post('http://127.0.0.1:8080/vendor/login', { 
+	$.post('http://139.59.5.183:8080/vendor/login', { 
 		"username" : $('#loginUser').val(),
 		"password" : $('#loginPassword').val()
 	}, function(response){		

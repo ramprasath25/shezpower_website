@@ -4,7 +4,7 @@ $(document).ready(function () {
     return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
   }
  
-  $.post('http://127.0.0.1:8080/user/productDetails',{"p_id":getQueryStringValue("p_id")},function(res){
+  $.post('http://139.59.5.183:8080/user/productDetails',{"p_id":getQueryStringValue("p_id")},function(res){
     console.log(res);
     if(res.http_code == 200){
         //BreadCrumb
@@ -15,7 +15,7 @@ $(document).ready(function () {
                                   '<li><a href="products.html?cat='+params.sub_category+'">'+params.sub_category+'</a></li>'+
                                   '</ul>');
 
-        $('.product-img').html('<img src="http://127.0.0.1:8080/'+params.images.detail_img+'" class="img-responsive" id ="img-details" alt="img">');
+        $('.product-img').html('<img src="http://139.59.5.183:8080/'+params.images.detail_img+'" class="img-responsive" id ="img-details" alt="img">');
         var specs = '';
         if(params.specs){
           specs += '<ul>';

@@ -3,7 +3,7 @@ $(document).ready(function () {
     return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
   }
   
-  $.post('http://127.0.0.1:8080/user/listProducts',{"category":getQueryStringValue("cat")},function(res){
+  $.post('http://139.59.5.183:8080/user/listProducts',{"category":getQueryStringValue("cat")},function(res){
     if(res.http_code == 200){
       var params = res.Products;
       var productList = '';
@@ -26,7 +26,7 @@ $(document).ready(function () {
                       '<div class="quickview">'+
                           '<a  class="btn btn-xs btn-quickview" href="product-details.html?p_id='+params[i].p_id+'">View </a>'+
                       '</div>'+
-                      '<a href="product-details.html?p_id='+params[i].p_id+'"><img src="http://127.0.0.1:8080/'+params[i].images.thumbnail_img+'" alt="img" class="img-responsive"></a>'+
+                      '<a href="product-details.html?p_id='+params[i].p_id+'"><img src="http://139.59.5.183:8080/'+params[i].images.thumbnail_img+'" alt="img" class="img-responsive"></a>'+
                       '<div class="promotion '+((params[i].priceDetails.discount =='')?"hidden":"")+'"> <span class="discount">'+params[i].priceDetails.discount +' OFF</span></div>'+
                   '</div>'+
                   '<div class="description">'+
