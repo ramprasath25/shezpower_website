@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Fav and touch icons -->
+    	<link rel="shortcut icon" href="assets/ico/favicon.png">
+		<title>Activation List</title>
+		<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<style>
+
+			table {
+			    font-family: arial, sans-serif;
+			    border-collapse: collapse;
+			    width: 100%;
+			}
+
+			td, th {
+			    border: 1px solid #bbb;
+			    text-align: left;
+			    padding: 8px;
+			}
+
+			tr:nth-child(even) {
+			    background-color: #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Activation List</h2>
+			<table>
+				<thead>
+					<th>S.no</th>
+					<th>Mail id</th>
+					<th>Mobile no</th>
+					<th>Registration Time</th>
+					<th>Action</th>
+				</thead>
+				<tbody id="activeList"></tbody>
+			</table>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			$.get('http://139.59.5.183:8080/admin/activationList', function(response){
+			if(response.VendorList.length > 0){
+				var params = '';
+				for(i = 0; i < response.VendorList.length; i++){
+					params += "<tr><td>"+ (i + 1) +"</td>"+
+								"<td>"+response.VendorList[i].email+"</td>"+
+								"<td>"+response.VendorList[i].mobileNo+"</td>"+
+								"<td>"+new Date(response.VendorList[i].registration_ts)+"</td>"+
+								"<td><a href='' onclick='activateVendor(\""+response.VendorList[i].vendor_id+"\")'>Activate</a> | <a onclick='viewVendor(\""+response.VendorList[i].vendor_id+"\")' href='' >View</a></td></tr>"
+				}
+				$('#activeList').html(params);
+			}
+			else{
+				$('#activeList').html('<tr><td colspan="5"><center>No vendor for activation..</center></td></tr>')
+			}
+			});
+		});		
+		function activateVendor(vendor_id){
+			$.post('http://139.59.5.183:8080/admin/activateVendor', {"vendor_id": vendor_id}, function(res){
+				console.log(res);
+			});
+		}
+		function viewVendor(vendor_id){
+		 	e.preventDefault();			
+			$.post('http://139.59.5.183:8080/admin/getVendorDetails', {"vendor_id": vendor_id}, function(res){
+				console.log(res);
+			});
+		}
+	</script>
+</html>
